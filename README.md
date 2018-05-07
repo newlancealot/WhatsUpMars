@@ -8,6 +8,7 @@ This assigment required data scraping from the following sources:
     Variables Created:
          newsTitle
          NewsParagraph
+         
 <2> JPL Mars (https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
     Used to find and captured the lastest image of mars using 'Splinter' and save it as a .jpg.
     Variables Created:
