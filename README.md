@@ -3,12 +3,13 @@ Bootcamp HW assigment
 
 Part 1
 This assigment required data scraping from the following sources:
+
 <l>NASA Mars News Site (https://mars.nasa.gov/news/)
     Latest News Title and Paragraph Text
     Variables Created:
          newsTitle
          NewsParagraph
-         
+
 <2> JPL Mars (https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
     Used to find and captured the lastest image of mars using 'Splinter' and save it as a .jpg.
     Variables Created:
