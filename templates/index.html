@@ -28,7 +28,7 @@
             <div class="col-md-12">
                 <h2>Latest Mars News</h2>
                 <h3>{{ news_title }}</h3>
-                <p>{{ mars_info.news_p }}</p>
+                <p>{{ mars.news_p }}</p>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
             <div class="panel">
                 <div class="panel-body">
                     <h2>Featured Mars Image</h2>
-                    <img src= {{ mars_info.featured_image_url }} alt="ERROR W/IMAGE" class="featured">
+                    <img src= {{ mars.featured_img_url }} alt="ERROR W/IMAGE" class="featured">
                 </div>
             </div>
         </div>
@@ -47,13 +47,13 @@
             <div class="panel border">
                 <div class="panel-body">
                     <h2>Current Weather on Mars</h2>
-                    <p>{{ mars_info.mars_weather }}</p>
+                    <p>{{ mars.mars_Weather }}</p>
                 </div>
             </div>
             <div class="panel">
                 <div class="panel-body">
                     <h2>Mars Facts</h2>
-                    {{ mars_info.profile_html|safe }}
+                    {{ mars.mars_dataTable_html|safe }}
                 </div>
             </div>
         </div>
@@ -61,28 +61,28 @@
     </div>
 
     <!-- Mars Hemispheres -->
-    <h2 class="hemispheres">Mars Hemispheres</h2>
+    <h2 class="hemispheres">Mar's Hemispheres</h2>
     <div class="row" style="padding-bottom:20px">
         <div class="col-sm-1"></div>
         <div class="col-sm-5 border">
-            <img src={{ mars_info.hemisphere_image_urls[0]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
-            <p class="caption">{{ mars_info.hemisphere_image_urls[0]["title"] }}</p>
+            <img src={{ mars.hemisphere_image_urls[1]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
+            <p class="caption">{{ mars.hemisphere_image_urls[1]["title"] }}</p>
         </div>
         <div class="col-sm-5 border" >
-            <img src={{ mars_info.hemisphere_image_urls[1]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
-            <p class="caption">{{ mars_info.hemisphere_image_urls[1]["title"] }}</p>
+            <img src={{ mars.hemisphere_image_urls[1]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
+            <p class="caption">{{ mars.hemisphere_image_urls[1]["title"] }}</p>
         </div>
         <div class="col-sm-1"></div>
     </div>
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-5 border" >
-            <img src={{ mars_info.hemisphere_image_urls[2]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
-            <p class="caption">{{ mars_info.hemisphere_image_urls[2]["title"] }}</p>
+            <img src={{ mars.hemisphere_image_urls[2]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
+            <p class="caption">{{ mars.hemisphere_image_urls[2]["title"] }}</p>
         </div>
         <div class="col-sm-5 border" >
-            <img src={{ mars_info.hemisphere_image_urls[3]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
-            <p class="caption">{{ mars_info.hemisphere_image_urls[3]["title"] }}</p>
+            <img src={{ mars.hemisphere_image_urls[3]["img_url"] }} alt="ERROR W/ HEMIS DATA" style="width:100%">
+            <p class="caption">{{ mars.hemisphere_image_urls[3]["title"] }}</p>
         </div>
         <div class="col-sm-1"></div>
     </div>

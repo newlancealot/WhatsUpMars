@@ -39,16 +39,16 @@ def scrape_f():
 
     # Retrieved news Title and Descrtiption
     news_p=articles.find("div", class_="rollover_description_inner").text
-    newsTitle =soup.find("div", class_="content_title").text
+    news_title =soup.find("div", class_="content_title").text
 
-    #print(newsTitle)
+    #print(news_title)
     #print(news_p)
 
     #not needed but retrieved for future development
     teaser=articles.find("div", class_="rollover_description_inner").text
 
     #Adding to dict
-    marsDict["newsTitle"]=newsTitle
+    marsDict["news_title"]=news_title
     marsDict["news_p"]=news_p
 
 
@@ -90,7 +90,7 @@ def scrape_f():
     #featured_img_url="https://www.jpl.nasa.gov/"+img_jpl
 
     #ADDING TO DICTIONARY
-    marsDict["featured_image_url"]= featured_img_url
+    marsDict["featured_img_url"]= featured_img_url
 
     print("FEATURED IMAGE OF MARS SCRAPED FROM FROM JPL.")
     print("CONTINUING SCRAPING ACTIVITIES..........")
@@ -160,7 +160,7 @@ def scrape_f():
     url_ASC='https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     response = requests.get(url_ASC)
     soup = bs(response.text, 'lxml')
-    hemisphere_urls=[]
+    hemisphere_image_urls=[]
     hemis = soup.find_all("div", class_="description")
 
     ############## Setting up splinter
@@ -191,7 +191,7 @@ def scrape_f():
     }
 
     # Append dict
-    hemisphere_urls.append(Cerberus_Hemisphere)
+    hemisphere_image_urls.append(Cerberus_Hemisphere)
 
 
     ##############################################################
@@ -223,7 +223,7 @@ def scrape_f():
     }
 
     # Append dict
-    hemisphere_urls.append(Schiaparelli_Hemisphere)
+    hemisphere_image_urls.append(Schiaparelli_Hemisphere)
 
 
     ##############################################################
@@ -255,7 +255,7 @@ def scrape_f():
     }
 
     # Append dict
-    hemisphere_urls.append(Syrtis_Major_Hemisphere)
+    hemisphere_image_urls.append(Syrtis_Major_Hemisphere)
 
 
     ##############################################################
@@ -287,10 +287,10 @@ def scrape_f():
     }
 
     # Append dict
-    hemisphere_urls.append(valles_marineris)
+    hemisphere_image_urls.append(valles_marineris)
 
     #ADD DICTIONARY TO MONGO
-    marsDict["hemispher_urls"]= hemisphere_urls
+    marsDict["hemisphere_image_urls"]= hemisphere_image_urls
 
 
     print("IMAGES OF MARS ACQUIRED --------")
