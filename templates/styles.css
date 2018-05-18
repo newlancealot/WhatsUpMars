@@ -1,0 +1,38 @@
+header {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: BLACK;
+    background: BLUE;
+    width: 100%;
+}
+
+.mission {
+    color: Orangered;
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: bold;
+    color: Orangered;
+}
+
+.featured {
+    height: auto;
+    width: 100%;
+    float: left;
+}
+
+.border {
+    border-width: 1px;
+    border-color: lightgray;
+}
+
+.hemispheres {
+    text-align: center;
+}
+
+.caption {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;   
+}
